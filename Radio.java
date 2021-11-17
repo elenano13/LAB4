@@ -1,4 +1,5 @@
 /**Radio.java 
+*@author Elena Rodríguez 21774 
 *@version 18/10/2021
 *Clase Radio funciona como clase madre   
 */
@@ -8,16 +9,17 @@ abstract class Radio implements ModoRadio, ModoReproduccion{
 	//Variables de instancia
 	protected String Modo, ModoSintonizacion;
 	protected int Volumen;
+	protected int NumListas = 2;
 	protected int Numlista=1;
 	protected int numCancion =1;
-	protected double Emisora;
+	protected double Emisora=1;
 	protected boolean estado = false; //Apagado
-	protected ArrayList<String> Emisoras = new ArrayList<>();
-	protected ArrayList<ArrayList<String>> ListasReproduccion = new ArrayList<>();
+	protected ArrayList<String> Emisoras = new ArrayList<>(100);
+	protected ArrayList<ArrayList<String>> ListasReproduccion = new ArrayList<>(100);
 	
 	//Inicializar algunas listas
-	private ArrayList<String> Lista1 = new ArrayList<String>();
-	private ArrayList<String> Lista2 = new ArrayList<String>();
+	private ArrayList<String> Lista1 = new ArrayList<String>(10);
+	private ArrayList<String> Lista2 = new ArrayList<String>(10);
 	
 
 	
@@ -30,18 +32,18 @@ abstract class Radio implements ModoRadio, ModoReproduccion{
 	
 	public void IniciarListas(){
 		Lista1.add("CANCIONES VARIAS");
-		Lista1.add("Nombre : Magic\n Duracion: 3:41\n Autor: Coldplay\n Genero: Pop\n");
-		Lista1.add("Nombre : Red\n Duracion: 2:43\n Autor: Taylor Swift\n Genero: Pop\n");
-		Lista1.add("Nombre : El Tucanazo\n Duracion: 2:43\n Autor: Los Tucanes de Tijuana\n Genero: Cumbia\n");
-		Lista1.add("Nombre : Mis Sentimientos\n Duracion: 2:54\n Autor: Los Angeles Azules\n Genero: Cumbia\n");
-		Lista1.add("Nombre : Doin' it Right\n Duracion: 2::43\n Autor: Daft Punk\n Genero: Electronica\n");
+		Lista1.add("Nombre : Magic\n"+"Duracion: 3:41\n"+"Autor: Coldplay\n"+"Genero: Pop\n");
+		Lista1.add("Nombre : Red\n"+"Duracion: 2:43\n"+"Autor: Taylor Swift\n"+"Genero: Pop\n");
+		Lista1.add("Nombre : El Tucanazo\n"+"Duracion: 2:43\n"+"Autor: Los Tucanes de Tijuana\n"+"Genero: Cumbia\n");
+		Lista1.add("Nombre : Mis Sentimientos\n"+"Duracion: 2:54\n"+"Autor: Los Angeles Azules\n"+"Genero: Cumbia\n");
+		Lista1.add("Nombre : Doin' it Right\n"+"Duracion: 2::43\n"+"Autor: Daft Punk\n"+"Genero: Electronica\n");
 		ListasReproduccion.add(Lista1);
 		Lista1.add("CANCIONES 2");
-		Lista2.add(("Nombre : Navidad sin ti\n"+"Duracion: 3:32\n"+"Autor: Los Bukis\n"+"Genero: Baladas\n"));
-		Lista2.add("Nombre : La feria de Cepillin\n Duracion: 2:32\n Autor: Cepillin\n Genero: Infantil\n");
-		Lista2.add("Nombre : Hasta que te conoci\n Duracion: 3:32\n Autor: Juan Gabriel\n Genero: Regional mexicano\n");
-		Lista2.add("Nombre : Noviembre sin ti\n Duracion: 2:32\n Autor: Reik\n Genero: Pop\n");
-		Lista2.add("Nombre : Se me perdio la cadenita\n Duracion: 2:43\n Autor: La Sonora Dinamita\n Genero: Cumbia\n");
+		Lista2.add("Nombre : Navidad sin ti\n"+"Duracion: 3:32\n"+"Autor: Los Bukis\n"+"Genero: Baladas\n");
+		Lista2.add("Nombre : La feria de Cepillin\n"+"Duracion: 2:32\n"+"Autor: Cepillin\n"+"Genero: Infantil\n");
+		Lista2.add("Nombre : Hasta que te conoci\n"+"Duracion: 3:32\n"+"Autor: Juan Gabriel\n"+"Genero: Regional mexicano\n");
+		Lista2.add("Nombre : Noviembre sin ti\n"+"Duracion: 2:32\n"+"Autor: Reik\n"+"Genero: Pop\n");
+		Lista2.add("Nombre : Se me perdio la cadenita\n"+"Duracion: 2:43\n"+"Autor: La Sonora Dinamita\n"+"Genero: Cumbia\n");
 		ListasReproduccion.add(Lista2);
 		
 	}
@@ -81,11 +83,11 @@ abstract class Radio implements ModoRadio, ModoReproduccion{
 	
 	public String CambiarEmisora(int opcion){
 		 String mensaje = "";
-		 if(opcion==1 || opcion <200){
+		 if(opcion==1 || Emisora <200){
 		 //Aumenta
 			 Emisora = Emisora+0.5;
 			 mensaje = "La nueva emisora "+Emisora+".\n ";
-		 } else if(opcion==2 || opcion>0){
+		 } else if(opcion==2 || Emisora>0){
 			 Emisora = Volumen-0.5;
 			 mensaje = "La nueva emisora "+Emisora+".\n ";
 		 } else{
@@ -117,20 +119,31 @@ abstract class Radio implements ModoRadio, ModoReproduccion{
 	}
 	
 	public String CambiarCancion(int num){
-		if (num==1){
+		String mensaje ="";
+		if (numCancion<=1){
+			mensaje = "No se puede bajar mas\n";
+		} else if (num==1){
 			numCancion = numCancion+1;
-		} else if (num==2 || num>0){
+			mensaje = "Se cambio al numero de la cancion "+numCancion+".\n";
+		} else if (num==2 || numCancion>1){
 			numCancion = numCancion-1;
-		}
-		String mensaje = "Se cambio al numero de la cancion "+numCancion+".\n";
+			mensaje = "Se cambio al numero de la cancion "+numCancion+".\n";
+		} 
+		return mensaje;
+	}
+	
+	public String Lista(int num){
+		String mensaje = ("\nSe selecciono la lista "+num);
 		return mensaje;
 	}
 	
 	public String EscucharCancion(int num){
+		num = num+1;
 		String cancion = ListasReproduccion.get(Numlista).get(num);
 		String Mensaje = "ESCUCHANDO...\n "+cancion;
 		return Mensaje;
 	}
+	
 	public void desconectar(){
 		System.out.println("Se ha desconectado el teléfono."); 
 	}
@@ -140,7 +153,7 @@ abstract class Radio implements ModoRadio, ModoReproduccion{
 	}
 	public void mostrarContactos(){
 		System.out.println("A continuación se muestra la lista de contactos:"); 
-        	rrayList<String> arr = new ArrayList<>();
+        	ArrayList<String> arr = new ArrayList<>();
         	arr.add("Laura Perez. Tel: 59851686.");
         	arr.add("Liz Ortiz. Tel: 29987617. ");
         	arr.add("Dayana González. Tel: 12354789.");
@@ -149,21 +162,30 @@ abstract class Radio implements ModoRadio, ModoReproduccion{
         	arr.add("Daisy Rosales. Tel: 96172534.");
         
         
-        	System.out.println(arr)
+        	System.out.println(arr);
         	System.out.println();
     	}
     
-    	public void llamar(int num){
-        	System.out.println("Usted está llamando a "+num+"en este momento"); 
+    public void llamar(int num){
+        System.out.println("Usted está llamando a "+num+"en este momento"); 
 
-    	} 
-    	public void finalizarLlamada(int num){
-        	System.out.println("Usted ha finalizado la llamada con"+num+"en este momento"); 
+    } 
+    	
+	public void finalizarLlamada(int num){
+        System.out.println("Usted ha finalizado la llamada con"+num+"en este momento"); 
 
    	 }
+	 
+	public abstract void TelefonoEspecial(int num);
+	 
+	public abstract void Productividad();
 
+
+	
+	
+	
 }
-
+	
 	
 
 	
