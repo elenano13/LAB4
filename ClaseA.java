@@ -1,3 +1,8 @@
+/**
+ * Una clase que implementa los métodos específicos para loa autos de clase A
+ * @version 1.0 15/11/2021
+ * @author Dulce Gonzalez 
+ */
 
 import java.util.ArrayList;
 class ClaseA extends Radio implements ExclusivoA {
