@@ -1,5 +1,4 @@
 /**Radio.java 
-*@author Elena Rodríguez 21774 
 *@version 18/10/2021
 *Clase Radio funciona como clase madre   
 */
