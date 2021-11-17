@@ -1,9 +1,15 @@
+
 import java.util.ArrayList;
-class claseA extends Radio implements ExclusivoA {
+class ClaseA extends Radio implements ExclusivoA {
+	
+	public ClaseA(String modo, int volumen){
+		super(modo, volumen);
+	}
 
-    public void llamarReciente(){
-
+    public void llamarReciente(int num){
+		 System.out.println("Llamando al ultimo numero"); 
     }
+	
     public void verTarjetas(){
         ArrayList<String> arr = new ArrayList<>();
         arr.add("Laura Perez. Tel: 59851686. Puesto: gerente general de ECOM gt.");
@@ -13,5 +19,13 @@ class claseA extends Radio implements ExclusivoA {
         
         System.out.println(arr);
     }
+	
+	public void TelefonoEspecial(int num){
+		llamarReciente(num);
+	}
+	
+	public void Productividad(){
+		verTarjetas();
+	}
 
 }
