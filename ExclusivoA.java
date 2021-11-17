@@ -1,4 +1,4 @@
 public interface ExclusivoA{
-    void llamarReciente();
+    void llamarReciente(int num);
     void verTarjetas(); 
 }
