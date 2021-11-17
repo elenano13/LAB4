@@ -1,11 +1,11 @@
-/**ModoRadio.java 
+/**ExclusivoClaseS.java 
 *@author Elena Rodríguez 21774 
 *@version 22/08/2021
-*Interfaz que contiene los metodos del Modo Radio  
+*Interfaz que contiene los metodos exclusivos S  
 */
 
 public interface ExclusivoClaseS{
-	String CambiarBocinas(int num); //Retorna un String con las instrucciones 
-	String PlanificarViajes(String lugar); //Retorna un String con las instrucciones 
+	void CambiarBocinas(int num); //Retorna un String con las instrucciones 
+	void PlanificarViajes(); //Retorna un String con las instrucciones 
 	
 }
