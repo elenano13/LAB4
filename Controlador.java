@@ -1,7 +1,7 @@
 /**Controlador.java 
-*@author Elena Rodríguez 21774 
-*@version 22/08/2021
-*Clase Driver program que se utiliza como director de orquesta   
+*@author Elena Rodríguez  Dulce González 
+*@version 16/11/2021
+*Clase Controlador que se utiliza como director de orquesta   
 */
 
 class Controlador{
