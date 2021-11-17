@@ -1,7 +1,7 @@
-/**ModoRadio.java 
+/**ModoReproduccion.java 
 *@author Elena Rodríguez 21774 
-*@version 22/08/2021
-*Interfaz que contiene los metodos del Modo Radio  
+*@version 16/11/2021
+*Interfaz que contiene los metodos del Modo Reproduccion 
 */
 
 public interface ModoReproduccion{
