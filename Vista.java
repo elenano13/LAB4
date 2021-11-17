@@ -26,7 +26,7 @@ class Vista{
 
 	public int ElegirTipoRadio(){
 		/** 
-		*Método menu int que le presenta las opciones al usuario 
+		*Método ElegirTipoRadio int que le presenta las opciones al usuario 
 		*@return opcion int con el numero de la opcion
 		*/
 		boolean flag = false;
@@ -51,8 +51,8 @@ class Vista{
 	
 	public int IngresarVolumen(){
 		/** 
-		*Método menu int que le presenta las opciones al usuario 
-		*@return opcion int con el numero de la opcion
+		*Método IngresarVolumen int q 
+		*@return opcion int con el volumen
 		*/
 
 		int opcion=0;
@@ -68,8 +68,8 @@ class Vista{
 		
 	public boolean Estado(){
 		/*
-		*Método menu int que le presenta las opciones al usuario 
-		*@return opcion int con el numero de la opcion
+		*Método Estado boolean pregunta si está encendido o apagado
+		*@return res boolean
 		*/
 		boolean flag = false;
 		int opcion=0;
@@ -131,7 +131,7 @@ class Vista{
 	
 	public int MenuModoRadio(){
 		/** 
-		*Método menu int que le presenta las opciones al usuario 
+		*Método MenuModoRadio int que le presenta las opciones al usuario 
 		*@return opcion int con el numero de la opcion
 		*/
 		boolean flag = false;
@@ -156,7 +156,7 @@ class Vista{
 	
 	public int MenuModoReproduccion(){
 		/** 
-		*Método menu int que le presenta las opciones al usuario 
+		*Método MenuModoReproduccion int que le presenta las opciones al usuario 
 		*@return opcion int con el numero de la opcion
 		*/
 		boolean flag = false;
@@ -181,7 +181,7 @@ class Vista{
 	
 	public int AMFM(){
 		/** 
-		*Método menu int que le presenta las opciones al usuario 
+		*Método AMFM int que le presenta las opciones al usuario 
 		*@return opcion int con el numero de la opcion
 		*/
 		boolean flag = false;
@@ -206,7 +206,7 @@ class Vista{
 	
 	public int Cambiar(){
 		/** 
-		*Método menu int que le presenta las opciones al usuario 
+		*Método Cambiar int que le presenta las opciones al usuario 
 		*@return opcion int con el numero de la opcion
 		*/
 		boolean flag = false;
@@ -231,8 +231,8 @@ class Vista{
 	
 	public String IngresarEmisora(){
 		/** 
-		*Método PedirAutor que le pregunta al usuario el nombre del autor del post
-		*@return autor String con el nombre
+		*Método IngresarEmisora que le pregunta al usuario emisora
+		*@return autor String con la emisora
 		*/
 		System.out.println("Ingrese la emisora");
 		String emi = scan.next();
@@ -241,7 +241,7 @@ class Vista{
 	
 	public int ElegirNumLista(){
 		/** 
-		*Método menu int que le presenta las opciones al usuario 
+		*Método ElegirNumLista int que le presenta las opciones al usuario 
 		*@return opcion int con el numero de la opcion
 		*/
 		boolean flag = false;
@@ -266,7 +266,7 @@ class Vista{
 	
 	public int IngresarNumCancion(){
 		/** 
-		*Método menu int que le presenta las opciones al usuario 
+		*Método IngresarNumCancion int que le pregunta al usuario
 		*@return opcion int con el numero de la opcion
 		*/
 		boolean flag = false;
@@ -291,7 +291,7 @@ class Vista{
 	
 	public int DesConTel(){
 		/** 
-		*Método menu int que le presenta las opciones al usuario 
+		*Método DesConTel int que le presenta las opciones al usuario 
 		*@return opcion int con el numero de la opcion
 		*/
 		boolean flag = false;
@@ -316,8 +316,8 @@ class Vista{
 	
 	public int IngresarNumero(){
 		/** 
-		*Método menu int que le presenta las opciones al usuario 
-		*@return opcion int con el numero de la opcion
+		*Método IngresarNumero int que le pregunta el numero
+		*@return opcion int con el numero 
 		*/
 
 		int opcion=0;
@@ -332,7 +332,7 @@ class Vista{
 	
 	public int Bocinas(){
 		/** 
-		*Método menu int que le presenta las opciones al usuario 
+		*Método Bocinas int que le presenta las opciones al usuario 
 		*@return opcion int con el numero de la opcion
 		*/
 		boolean flag = false;
@@ -357,7 +357,7 @@ class Vista{
 	
 	public int MenuModoTelefono(){
 		/** 
-		*Método menu int que le presenta las opciones al usuario 
+		*Método MenuModoTelefono int que le presenta las opciones al usuario 
 		*@return opcion int con el numero de la opcion
 		*/
 		boolean flag = false;
