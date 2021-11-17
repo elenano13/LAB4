@@ -131,7 +131,39 @@ abstract class Radio implements ModoRadio, ModoReproduccion{
 		String Mensaje = "ESCUCHANDO...\n "+cancion;
 		return Mensaje;
 	}
+	public void desconectar(){
+		System.out.println("Se ha desconectado el teléfono."); 
+	}
 	
-	
+	public void conectar(){
+		System.out.println("Se ha conectado el teléfono."); 
+	}
+	public void mostrarContactos(){
+		System.out.println("A continuación se muestra la lista de contactos:"); 
+        	rrayList<String> arr = new ArrayList<>();
+        	arr.add("Laura Perez. Tel: 59851686.");
+        	arr.add("Liz Ortiz. Tel: 29987617. ");
+        	arr.add("Dayana González. Tel: 12354789.");
+        	arr.add("Jackeline Navichoque. Tel: 89651256.");
+        	arr.add("Jonathan Espinoza. Tel: 16527896.");
+        	arr.add("Daisy Rosales. Tel: 96172534.");
+        
+        
+        	System.out.println(arr)
+        	System.out.println();
+    	}
+    
+    	public void llamar(int num){
+        	System.out.println("Usted está llamando a "+num+"en este momento"); 
+
+    	} 
+    	public void finalizarLlamada(int num){
+        	System.out.println("Usted ha finalizado la llamada con"+num+"en este momento"); 
+
+   	 }
+
 }
+
+	
+
 	
