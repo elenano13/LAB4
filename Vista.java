@@ -1,6 +1,6 @@
 /**Vista.java 
 *@author Elena Rodríguez 21774 
-*@version 1/11/2021
+*@version 16/11/2021
 *Clase Vista utilizada en el main Controlador.  
 */
 import java.util.Scanner;
