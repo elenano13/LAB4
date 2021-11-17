@@ -8,13 +8,13 @@ import java.util.ArrayList;
 class ClaseA extends Radio implements ExclusivoA {
 	
 	public ClaseA(String modo, int volumen){
-		super(modo, volumen);
+		super(modo, volumen); //constructor
 	}
 
     public void llamarReciente(int num){
 		 System.out.println("Llamando al ultimo numero"); 
     }
-	
+	//almacena una arraylist con la lista de contactos
     public void verTarjetas(){
         ArrayList<String> arr = new ArrayList<>();
         arr.add("Laura Perez. Tel: 59851686. Puesto: gerente general de ECOM gt.");
@@ -24,7 +24,11 @@ class ClaseA extends Radio implements ExclusivoA {
         
         System.out.println(arr);
     }
-	
+	 /** 
+     * Llama a un número marcado recientemente.
+     * @param num el numero al que desea llamar.
+
+     */
 	public void TelefonoEspecial(int num){
 		llamarReciente(num);
 	}
