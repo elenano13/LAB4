@@ -1,5 +1,4 @@
 /**Radio.java 
-*@author Elena Rodríguez 21774 
 *@version 18/10/2021
 *Clase Radio funciona como clase madre   
 */
@@ -31,18 +30,18 @@ abstract class Radio implements ModoRadio, ModoReproduccion{
 	
 	public void IniciarListas(){
 		Lista1.add("CANCIONES VARIAS");
-		Lista1.add("Nombre : Magic\n"+"Duracion: 3:41\n"+"Autor: Coldplay\n"+"Genero: Pop\n");
-		Lista1.add("Nombre : Red\n"+"Duracion: 2:43\n"+"Autor: Taylor Swift\n"+"Genero: Pop\n");
-		Lista1.add("Nombre : El Tucanazo\n"+"Duracion: 2:43\n"+"Autor: Los Tucanes de Tijuana\n"+"Genero: Cumbia\n");
-		Lista1.add("Nombre : Mis Sentimientos\n"+"Duracion: 2:54\n"+"Autor: Los Angeles Azules\n"+"Genero: Cumbia\n");
-		Lista1.add("Nombre : Doin' it Right\n"+"Duracion: 2::43\n"+"Autor: Daft Punk\n"+"Genero: Electronica\n");
+		Lista1.add("Nombre : Magic\n Duracion: 3:41\n Autor: Coldplay\n Genero: Pop\n");
+		Lista1.add("Nombre : Red\n Duracion: 2:43\n Autor: Taylor Swift\n Genero: Pop\n");
+		Lista1.add("Nombre : El Tucanazo\n Duracion: 2:43\n Autor: Los Tucanes de Tijuana\n Genero: Cumbia\n");
+		Lista1.add("Nombre : Mis Sentimientos\n Duracion: 2:54\n Autor: Los Angeles Azules\n Genero: Cumbia\n");
+		Lista1.add("Nombre : Doin' it Right\n Duracion: 2::43\n Autor: Daft Punk\n Genero: Electronica\n");
 		ListasReproduccion.add(Lista1);
 		Lista1.add("CANCIONES 2");
-		Lista2.add("Nombre : Navidad sin ti\n"+"Duracion: 3:32\n"+"Autor: Los Bukis\n"+"Genero: Baladas\n");
-		Lista2.add("Nombre : La feria de Cepillin\n"+"Duracion: 2:32\n"+"Autor: Cepillin\n"+"Genero: Infantil\n");
-		Lista2.add("Nombre : Hasta que te conoci\n"+"Duracion: 3:32\n"+"Autor: Juan Gabriel\n"+"Genero: Regional mexicano\n");
-		Lista2.add("Nombre : Noviembre sin ti\n"+"Duracion: 2:32\n"+"Autor: Reik\n"+"Genero: Pop\n");
-		Lista2.add("Nombre : Se me perdio la cadenita\n"+"Duracion: 2:43\n"+"Autor: La Sonora Dinamita\n"+"Genero: Cumbia\n");
+		Lista2.add(("Nombre : Navidad sin ti\n"+"Duracion: 3:32\n"+"Autor: Los Bukis\n"+"Genero: Baladas\n"));
+		Lista2.add("Nombre : La feria de Cepillin\n Duracion: 2:32\n Autor: Cepillin\n Genero: Infantil\n");
+		Lista2.add("Nombre : Hasta que te conoci\n Duracion: 3:32\n Autor: Juan Gabriel\n Genero: Regional mexicano\n");
+		Lista2.add("Nombre : Noviembre sin ti\n Duracion: 2:32\n Autor: Reik\n Genero: Pop\n");
+		Lista2.add("Nombre : Se me perdio la cadenita\n Duracion: 2:43\n Autor: La Sonora Dinamita\n Genero: Cumbia\n");
 		ListasReproduccion.add(Lista2);
 		
 	}
